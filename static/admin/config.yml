@@ -1,6 +1,10 @@
+# AFTER (The required configuration for Cloudflare Pages):
 backend:
-  name: git-gateway
+  name: github # <--- Use the GitHub backend name
   branch: main
+  repo: ImYaseenMalik/gatsby-starter-decap-cms
+  base_url: https://gatsby-starter-decap-cms-4dj.pages.dev # <--- Add this line
+  auth_endpoint: /api/callback # <--- Add this line (or /api/auth if using a specific starter)
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
